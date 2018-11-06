@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Starting seeding process..."
+Article.destroy_all
+
+puts "Creating new seeds"
+
+20.times do
+  Article.create(
+    title: Faker::Book.title,
+    content: Faker::DumbAndDumber.quote
+  )
+end
+
+puts "Finished seeding process!"
+
