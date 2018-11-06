@@ -1,7 +1,8 @@
-<h1><%=@article.title%></h1>
-<div class=box-container>
+
+<div class=container>
+  <h1><%=@article.title%></h1>
   <p><%= @article.content %></p>
-</div>
+
 <br>
 
 
@@ -9,3 +10,4 @@
 
 <!-- #link to delete -->
 <%= link_to "Delete", article_path(@article), method: :delete %>
+</div>
